@@ -24,3 +24,11 @@ WLAN SSID is: Intervalometer
 WLAN KEY is: 12345678
 
 (can be changed to your needs)
+
+I used the Pins
+
+32 for Shutter
+35 for Focus
+33 for Ground
+
+But this depends on your NodeMCU Board and your Wiring.
