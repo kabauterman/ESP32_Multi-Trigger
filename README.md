@@ -55,3 +55,5 @@ Parts List:
 - Wires
 - soldering Iron
 - soldering Tin
+
+*This are Affiliate Links that give me some little provision for each sale done over them.
