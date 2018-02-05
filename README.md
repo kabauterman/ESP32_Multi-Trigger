@@ -41,7 +41,7 @@ I used the Pins
 
 32 for Shutter
 35 for Focus
-33 for Ground (not needed if you solder this pin to GND.
+33 for Ground (not needed if you solder this pin to GND.)
 
 But this depends on your NodeMCU Board and your Wiring.
 
@@ -49,7 +49,7 @@ Parts List:
 
 - ESP32 NodeMCU Board (Amazon.de*:http://amzn.to/2GDF24A Banggood*:http://bit.ly/2Ey2kZ2)
 - 2,5mm Stereo 3-Pin Female Connector (http://bit.ly/2ny1oMh)
-- Remote Trigger Cable (in my Case for Sony) (Amazon.de*:http://amzn.to/2E1GwY3)
+- Remote Trigger Cable (in my Case for Sony) (Amazon.de*:http://amzn.to/2E1GwY3 or http://amzn.to/2Ec6LLt)
 - 24x10 Pins Double Side PCB (Amazon.de*:http://amzn.to/2DWnwLg Banggood*:http://bit.ly/2nzSdLi)
 - Female Header Connector for PCB (Amazon.de*:http://amzn.to/2FF5auH Banggood*:http://bit.ly/2rZof8Z)
 - Wires
