@@ -114,7 +114,7 @@ void setup(void){
 
   digitalWrite(shutter, HIGH);
   digitalWrite(focus, HIGH);
-  digitalWrite(ground, HIGH);
+  digitalWrite(ground, LOW);
 
 }
 
@@ -214,7 +214,6 @@ void do_bulb(){
     Serial.print("BULB Exposure started, ");
     digitalWrite(shutter, LOW);
     digitalWrite(focus, LOW);
-    digitalWrite(ground, LOW);
     delay(50);
     Serial.print("Okay, all to GND... ");
  }
@@ -223,7 +222,6 @@ void do_bulb(){
       Serial.print(" End BULB Exposure, ");
       digitalWrite(shutter, HIGH);
       digitalWrite(focus, HIGH);
-      digitalWrite(ground, HIGH);
       delay(50);
       Serial.print("Okay, all to HIGH... ");
  }
@@ -240,12 +238,10 @@ int do_shot(){
     Serial.print("All to GND... ");
     digitalWrite(shutter, LOW);
     digitalWrite(focus, LOW);
-    digitalWrite(ground, LOW);
     delay(in_ms/2);
     Serial.print(" All to HIGH... ");
     digitalWrite(shutter, HIGH);
     digitalWrite(focus, HIGH);
-    digitalWrite(ground, HIGH);
     delay(in_ms/2);
     
     Serial.print(" Shot has been taken... ");
@@ -261,7 +257,6 @@ void do_one_shot(){
 
     Serial.print(" Take a shot ...");
     Serial.print("All to GND... ");
-    digitalWrite(ground, LOW);
     digitalWrite(focus, LOW);
     delay(100);
     digitalWrite(shutter, LOW);
@@ -269,7 +264,6 @@ void do_one_shot(){
     Serial.print(" All to HIGH... ");
     digitalWrite(shutter, HIGH);
     digitalWrite(focus, HIGH);
-    digitalWrite(ground, HIGH);
     delay(50);    
     Serial.print(" Shot has been taken... ");
 }
@@ -283,7 +277,6 @@ void do_one_timer_shot(){
     Serial.print(" Milliseconds ");
     delay(timer_ms);
     Serial.print("All to GND... ");
-    digitalWrite(ground, LOW);
     digitalWrite(focus, LOW);
     delay(100);
     digitalWrite(shutter, LOW);
@@ -291,7 +284,6 @@ void do_one_timer_shot(){
     Serial.print(" All to HIGH... ");
     digitalWrite(shutter, HIGH);
     digitalWrite(focus, HIGH);
-    digitalWrite(ground, HIGH);
     delay(50);    
     Serial.print(" Shot has been taken... ");
 }
