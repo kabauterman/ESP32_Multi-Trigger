@@ -34,7 +34,7 @@ String bulb;
 
 
 /* change your ssid and password here */
-const char* ssid = "Intervalometer";
+const char* ssid = "Multi-Trigger";
 const char* password = "12345678";
 
 ESP32WebServer server(80);
