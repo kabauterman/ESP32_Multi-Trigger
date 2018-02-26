@@ -2,8 +2,12 @@
 This is a Camera WLAN-Remote Trigger based on ESP32 NodeMCU
 
 Pure Parts Price:
-- If you buy cheaper from China (Banggood): ca. 9 € without the Cable
-- If you buy from Amazon.de: ca. 16 € without the Cable
+- If you buy cheaper from China (Banggood): ca. 9 €
+- If you buy from Amazon.de: ca. 16 €
+- If you want the OLED Version without Battery: 12 €
+- If you want the OLED Version with Battery: 14 € + 18650 Li-Ion Battery
+
+All excluding the Cable
 
 Requirements are:
 
