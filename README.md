@@ -26,34 +26,42 @@ What may be possible:
 
 What is on my To-Do-List:
 
-- testing different NodeMCU Boards (with Battery, with OLED Display)
 - making more Prototypes and create a 3D Printed Housing
 - testing Hot-Shoe mounts to get Power from the Camera
 
-WLAN SSID is: Intervalometer
+WLAN SSID is: Multi-Trigger
 WLAN KEY is: 12345678
 
-Power is provided over USB so you need a little Powerbank to power the Trigger.
+Power is provided over USB by a Powerbank or by using the Battery Module WeMos ESP32 Board (much bigger).
 
 (can be changed to your needs)
 
-I used the Pins
+Pins I used on the NodeMCU Version:
 
 32 for Shutter
 35 for Focus
 33 for Ground (not needed if you solder this pin to GND.)
 
-But this depends on your NodeMCU Board and your Wiring.
+Pins I used on the WeMos OLED & Battery Version:
+
+26 for Shutter
+25 for Focus
+27 for Ground (not needed if you solder this pin to GND.)
 
 Parts List:
 
 - ESP32 NodeMCU Board (Amazon.de*:http://amzn.to/2GDF24A Banggood*:http://bit.ly/2Ey2kZ2)
+- or WeMos OLED Board (Amazon.de*:http://amzn.to/2osjAYF Banggood*:http://bit.ly/2sTLZvs)
+- or WeMos OLED Battery Board (Amazon.de*: Banggood*:http://bit.ly/2HLnuE2)
 - 2,5mm Stereo 3-Pin Female Connector (http://bit.ly/2ny1oMh)
 - Remote Trigger Cable (in my Case for Sony) (Amazon.de*:http://amzn.to/2E1GwY3 or http://amzn.to/2Ec6LLt)
-- 24x10 Pins Double Side PCB (Amazon.de*:http://amzn.to/2DWnwLg Banggood*:http://bit.ly/2nzSdLi)
-- Female Header Connector for PCB (Amazon.de*:http://amzn.to/2FF5auH Banggood*:http://bit.ly/2rZof8Z)
 - Wires
 - soldering Iron
 - soldering Tin
+
+just needed of you don't solder directly:
+- 24x10 Pins Double Side PCB (Amazon.de*:http://amzn.to/2DWnwLg Banggood*:http://bit.ly/2nzSdLi)
+- Female Header Connector for PCB (Amazon.de*:http://amzn.to/2FF5auH Banggood*:http://bit.ly/2rZof8Z)
+
 
 *This are Affiliate Links that give me some little provision for each sale done over them.
