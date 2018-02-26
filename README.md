@@ -10,6 +10,11 @@ Requirements are:
 https://github.com/espressif/arduino-esp32
 and
 https://github.com/nhatuan84/esp32-webserver
+and if you want to compile the OLED Version
+https://github.com/ThingPulse/esp8266-oled-ssd1306
+
+The Libaries go to Documents/Arduino/Libaries
+For the Board Description follow the instructions in the Link.
 
 What it actually can do at the moment:
 
@@ -47,6 +52,8 @@ Pins I used on the WeMos OLED & Battery Version:
 26 for Shutter
 25 for Focus
 27 for Ground (not needed if you solder this pin to GND.)
+
+Don't forget to choose the right Board before compiling.
 
 Parts List:
 
