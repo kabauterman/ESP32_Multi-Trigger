@@ -57,6 +57,12 @@ Pins I used on the WeMos OLED & Battery Version:
 25 for Focus
 27 for Ground (not needed if you solder this pin to GND.)
 
+Pins I used on the WeMos OLED Version:
+
+14 for Shutter
+12 for Focus
+13 for Ground (not needed if you solder this pin to GND.)
+
 Don't forget to choose the right Board before compiling.
 
 Parts List:
