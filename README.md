@@ -9,6 +9,8 @@ Pure Parts Price:
 
 All excluding the Cable
 
+How all the Connectors work: http://www.doc-diy.net/photo/remote_pinout/
+
 Requirements are:
 
 https://github.com/espressif/arduino-esp32
