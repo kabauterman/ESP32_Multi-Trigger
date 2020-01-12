@@ -20,8 +20,6 @@
 //pin config
 
 const int shutter = 32;
-const int focus = 35;
-const int ground = 33;
 
 //declare variables
 
@@ -123,13 +121,10 @@ void setup(void){
 
 //define pins
   pinMode(shutter, OUTPUT);
-  pinMode(focus, OUTPUT);
-  pinMode(ground, OUTPUT);
+  pinMode(2, OUTPUT);
 
-  digitalWrite(shutter, HIGH);
-  digitalWrite(focus, HIGH);
-  digitalWrite(ground, LOW);
-
+  digitalWrite(shutter, LOW);
+  digitalWrite(2, LOW);
 }
 
 void handleRoot() {
@@ -226,18 +221,16 @@ void do_bulb(){
 
  if (bulb == "BULB-Start"){
     Serial.print("BULB Exposure started, ");
-    digitalWrite(shutter, LOW);
-    digitalWrite(focus, LOW);
+    digitalWrite(shutter, HIGH);
     delay(50);
     Serial.print("Okay, all to GND... ");
  }
 
  if (bulb == "BULB-Stop"){
       Serial.print(" End BULB Exposure, ");
-      digitalWrite(shutter, HIGH);
-      digitalWrite(focus, HIGH);
+      digitalWrite(shutter, LOW);
       delay(50);
-      Serial.print("Okay, all to HIGH... ");
+      Serial.print("Okay, all to LOW... ");
  }
   
 }
@@ -250,17 +243,15 @@ int do_shot(){
     Serial.println((rt_ms / 1000));
 
     Serial.print("All to GND... ");
-    digitalWrite(shutter, LOW);
-    digitalWrite(focus, LOW);
-    delay(in_ms/2);
-    Serial.print(" All to HIGH... ");
     digitalWrite(shutter, HIGH);
-    digitalWrite(focus, HIGH);
-    delay(in_ms/2);
+    delay(100);
+    Serial.print(" All to LOW... ");
+    digitalWrite(shutter, LOW);
+    delay(in_ms);
     
     Serial.print(" Shot has been taken... ");
     rt_ms = rt_ms - in_ms;
-    Serial.print("Remaining Runtime lowered to (s): ");
+    Serial.print("Remaining Runtime HIGHered to (s): ");
     Serial.println((rt_ms / 1000));
     return rt_ms;
 }
@@ -271,13 +262,10 @@ void do_one_shot(){
 
     Serial.print(" Take a shot ...");
     Serial.print("All to GND... ");
-    digitalWrite(focus, LOW);
-    delay(100);
-    digitalWrite(shutter, LOW);
-    delay(100);
-    Serial.print(" All to HIGH... ");
     digitalWrite(shutter, HIGH);
-    digitalWrite(focus, HIGH);
+    delay(100);
+    Serial.print(" All to LOW... ");
+    digitalWrite(shutter, LOW);
     delay(50);    
     Serial.print(" Shot has been taken... ");
 }
@@ -291,13 +279,10 @@ void do_one_timer_shot(){
     Serial.print(" Milliseconds ");
     delay(timer_ms);
     Serial.print("All to GND... ");
-    digitalWrite(focus, LOW);
-    delay(100);
-    digitalWrite(shutter, LOW);
-    delay(100);
-    Serial.print(" All to HIGH... ");
     digitalWrite(shutter, HIGH);
-    digitalWrite(focus, HIGH);
+    delay(100);
+    Serial.print(" All to LOW... ");
+    digitalWrite(shutter, LOW);
     delay(50);    
     Serial.print(" Shot has been taken... ");
 }
@@ -331,6 +316,7 @@ void loop() {
   
   if (start == "Start"){ 
     if (rt_ms >= 0){
+      digitalWrite(2, LOW);
       do_shot();
       handle_intervalo;
     }
@@ -341,11 +327,13 @@ void loop() {
   
   if (start == "Stop"){ 
   handle_intervalo;
+  digitalWrite(2, HIGH);
   }
 
 // check if BULB Exposure has been started
 
-  if (bulb == "BULB-Start"){ 
+  if (bulb == "BULB-Start"){
+      digitalWrite(2, LOW); 
       do_bulb();
       handle_trigger;
   }
@@ -354,14 +342,17 @@ void loop() {
       do_bulb();
       handle_trigger;
       bulb="finish";
+      digitalWrite(2, HIGH);
   }
 
 // check if shot has been triggered
 
   if (shot == "Shot"){
+      digitalWrite(2, LOW);
       do_one_shot();
       shot="finish";
       handle_trigger;
+      digitalWrite(2, HIGH);
   }
 
   
